@@ -1,0 +1,6 @@
+/Users/anca/Workspace/san-francisco-testcontainers-sample/testcontainers-shipment-list-demo/shipment-picture-lambda-validator/src/main/java/dev/ancaghenade/shipmentpicturelambdavalidator/Location.java
+/Users/anca/Workspace/san-francisco-testcontainers-sample/testcontainers-shipment-list-demo/shipment-picture-lambda-validator/src/main/java/dev/ancaghenade/shipmentpicturelambdavalidator/S3ClientHelper.java
+/Users/anca/Workspace/san-francisco-testcontainers-sample/testcontainers-shipment-list-demo/shipment-picture-lambda-validator/src/main/java/dev/ancaghenade/shipmentpicturelambdavalidator/SNSClientHelper.java
+/Users/anca/Workspace/san-francisco-testcontainers-sample/testcontainers-shipment-list-demo/shipment-picture-lambda-validator/src/main/java/dev/ancaghenade/shipmentpicturelambdavalidator/ServiceHandler.java
+/Users/anca/Workspace/san-francisco-testcontainers-sample/testcontainers-shipment-list-demo/shipment-picture-lambda-validator/src/main/java/dev/ancaghenade/shipmentpicturelambdavalidator/TextParser.java
+/Users/anca/Workspace/san-francisco-testcontainers-sample/testcontainers-shipment-list-demo/shipment-picture-lambda-validator/src/main/java/dev/ancaghenade/shipmentpicturelambdavalidator/Watermark.java
