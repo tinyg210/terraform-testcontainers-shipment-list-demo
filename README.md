@@ -33,7 +33,7 @@ the necessary test infrastructure. The original demo: https://github.com/localst
 - [Maven 3.8.5](https://maven.apache.org/install.html) & [Java 17](https://www.java.com/en/download/help/download_options.html)
 - [Docker](https://docs.docker.com/get-docker/) - for running LocalStack
 
-#### What it does
+#### Application description
 
 *shipment-list-demo* is a Spring Boot application dealing with CRUD operations a person can
 execute on a bunch of shipments that they're allowed to view - think of it like the Post app.
@@ -48,7 +48,7 @@ The AWS services involved are:
 - [SQS](https://docs.localstack.cloud/user-guide/aws/sqs/) that subscribes to a topic and delivers the messages to the Spring Boot app
 
 
-#### Running tests
+### Running tests
 
 There are several tests available, testing different scenarios, to assure good integration between services.
 Ideally we want to focus on the workflows and make sure they run correctly:
@@ -56,7 +56,7 @@ Ideally we want to focus on the workflows and make sure they run correctly:
 ![Workflows](img/workflows.png)
 
 
-#### Terraform configuration files as init hooks
+### Terraform configuration files as init hooks
 
 Since the main infrastructure provisioning tool is Terraform, it would only be natural to use the same file to create resources
 for testing purposes. This insures the environment is set up as expected and there are no discrepancies between what we test and
