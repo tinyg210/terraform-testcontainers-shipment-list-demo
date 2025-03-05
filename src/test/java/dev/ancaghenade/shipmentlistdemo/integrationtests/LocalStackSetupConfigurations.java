@@ -14,6 +14,7 @@ import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import org.testcontainers.shaded.com.fasterxml.jackson.databind.ObjectMapper;
 import org.testcontainers.utility.DockerImageName;
+import org.testcontainers.utility.MountableFile;
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
 import software.amazon.awssdk.regions.Region;
@@ -35,11 +36,11 @@ public class LocalStackSetupConfigurations {
                     .withEnv("LAMBDA_REMOVE_CONTAINERS", "1")
                     .withEnv("EXTENSION_AUTO_INSTALL", "localstack-extension-terraform-init")
                     .withEnv("LOCALSTACK_AUTH_TOKEN", System.getenv("LOCALSTACK_AUTH_TOKEN"))
-                    .withFileSystemBind("./lambda/shipment-picture-lambda-validator.jar",
+                    .withCopyToContainer(MountableFile.forHostPath("./lambda/shipment-picture-lambda-validator.jar"),
                             "/etc/localstack/init/ready.d/lambda/shipment-picture-lambda-validator.jar")
-                    .withFileSystemBind("./terraform",
+                    .withCopyToContainer(MountableFile.forHostPath("./terraform"),
                             "/etc/localstack/init/ready.d")
-                    .withStartupTimeout(Duration.of(4, ChronoUnit.MINUTES))
+                    .withStartupTimeout(Duration.of(6, ChronoUnit.MINUTES))
                     .withEnv("DEBUG", "1");
 
     protected static final Logger LOGGER = LoggerFactory.getLogger(LocalStackSetupConfigurations.class);
